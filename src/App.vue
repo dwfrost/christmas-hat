@@ -1,8 +1,7 @@
 <template>
     <div id="app">
-        <!-- <Snow/> -->
+        <Snow />
         <div class="title">
-            <!-- <p>MERRY CHRISMAS</p> -->
             <img src="./assets/bg.png" alt="" />
         </div>
 
@@ -53,8 +52,7 @@ import { defineComponent, reactive, toRefs, ref, onMounted } from 'vue'
 
 import html2canvas from 'html2canvas'
 
-// import Snow from '@/components/Snow.vue'
-import Snow from './components/Snow.vue'
+import Snow from '@/components/Snow.vue'
 
 // import hat1 from './assets/hat1.png'
 const hat1 = new URL('./assets/hat1.png', import.meta.url).href
@@ -88,7 +86,6 @@ const fileChange = (event: Event) => {
     console.log('event', event)
     event.preventDefault()
     let reader = new FileReader()
-    // let img = event.target.files[0]
     const target = event.target as HTMLInputElement
     const img: File = (target.files as FileList)[0]
     console.log('img', img)

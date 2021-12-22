@@ -15,13 +15,16 @@ export default {
 .snow-wrap {
     // 雪花
     position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
+    // left: 0;
+    // top: 0;
+    // right: 0;
+    // bottom: 0;
+    inset: 0;
+    z-index: 1;
     background: url('../assets/snow1.png'), url('../assets/snow2.png');
     -webkit-animation: snow 10s linear infinite;
     animation: snow 10s linear infinite;
+    pointer-events: none;
     @keyframes snow {
         0% {
             background-position: 0 0, 0 0;
